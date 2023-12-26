@@ -3,12 +3,10 @@
 
 ## Introduction
 
----
 This is a toolset that simplifies the process of solving TSP (Traveling Salesman Problem) problems.
 
 ## Usage
 
----
 How to import:
 ```python
 from TSPLifesaver.structure import BasicRoute, PointWithEuclideanDistance
