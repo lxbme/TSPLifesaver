@@ -10,7 +10,7 @@ This is a toolset that simplifies the process of solving TSP (Traveling Salesman
 How to import:
 ```python
 from TSPLifesaver.structure import BasicRoute, PointWithEuclideanDistance
-from TSPLifesaver.optimizer import #still_developing
+from TSPLifesaver.optimizer import SimulatedAnnealing
 from TSPLifesaver.tools import #still_developing
 ```
 
@@ -44,4 +44,10 @@ Calculate total distance:
 ```python
 print(route.distance())
 # 6.928203230275509
+```
+
+**Optimize the route:**
+```python
+optimizer = SimulatedAnnealing(route, temperature=10000, cooling_rate=0.003, min_temperature=1)
+route = optimizer.optimize()
 ```
