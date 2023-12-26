@@ -1,0 +1,39 @@
+from collections.abc import MutableSequence
+from abc import ABC, abstractmethod
+from numbers import Number
+
+
+class _Point(ABC, MutableSequence):
+    def __delitem__(self, key): ...
+    def insert(self, index, value): ...
+
+    @property
+    def name(self):
+        """
+        The name of the Point.
+        :return: Any
+        """
+        return None
+
+    @abstractmethod
+    def distance_to(self, other: MutableSequence):
+        """
+        Calculate the distance between this Point and another.
+        :param other:
+        :return The distance between the:
+        """
+
+
+class _Route(ABC, MutableSequence):
+    @abstractmethod
+    def swap(self, index_1: int, index_2: int) -> None:
+        """
+        This method should swap the positions of the two elements by indexes.
+        """
+
+    @abstractmethod
+    def distance(self):
+        """
+        This method should return the total length of the route.
+        :return Number: The total length of the route:
+        """
