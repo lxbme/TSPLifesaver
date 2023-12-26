@@ -1,10 +1,10 @@
 from typing import List, Any, MutableSequence, Sequence
 from math import sqrt
 
-from .abc import _Route, _Point
+from .abc import AbstractRoute, AbstractPoint
 
 
-class BasicPoint(_Point):
+class BasicPoint(AbstractPoint):
     def __init__(self, pos: MutableSequence, name: Any = None):
         self.pos = pos
         self._name = name
@@ -49,8 +49,8 @@ class PointWithEuclideanDistance(BasicPoint):
         super().__init__(pos, name)
 
 
-class BasicRoute(_Route):
-    def __init__(self, points: MutableSequence[_Point], name="BasicRoute"):
+class BasicRoute(AbstractRoute):
+    def __init__(self, points: MutableSequence[AbstractPoint], name="BasicRoute"):
         self.points = points
         self.name = name
 
@@ -96,5 +96,5 @@ class BasicRoute(_Route):
         """
         self[index_1], self[index_2] = self[index_2], self[index_1]
 
-    def append(self, value: _Point):
+    def append(self, value: AbstractPoint):
         self.points.append(value)

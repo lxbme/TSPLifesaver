@@ -3,8 +3,9 @@ from abc import ABC, abstractmethod
 from numbers import Number
 
 
-class _Point(ABC, MutableSequence):
+class AbstractPoint(ABC, MutableSequence):
     def __delitem__(self, key): ...
+
     def insert(self, index, value): ...
 
     @property
@@ -24,7 +25,7 @@ class _Point(ABC, MutableSequence):
         """
 
 
-class _Route(ABC, MutableSequence):
+class AbstractRoute(ABC, MutableSequence):
     @abstractmethod
     def swap(self, index_1: int, index_2: int) -> None:
         """
@@ -36,4 +37,12 @@ class _Route(ABC, MutableSequence):
         """
         This method should return the total length of the route.
         :return Number: The total length of the route:
+        """
+
+
+class AbstractOptimizer(ABC):
+    @abstractmethod
+    def optimize(self):
+        """
+        This method should start the process of optimization and return the result.
         """
