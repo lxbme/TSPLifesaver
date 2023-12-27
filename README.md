@@ -5,13 +5,19 @@
 
 This is a toolset that simplifies the process of solving TSP (Traveling Salesman Problem) problems.
 
+## Installation 
+
+```python
+pip install TSPLifesaver
+```
+
 ## Usage
 
 How to import:
 ```python
 from TSPLifesaver.structure import BasicRoute, PointWithEuclideanDistance
 from TSPLifesaver.optimizer import SimulatedAnnealing
-from TSPLifesaver.tools import #still_developing
+from TSPLifesaver.tools import route_from_sequence
 ```
 
 Define a point:
@@ -31,6 +37,10 @@ Define a route:
 ```python
 points = [PointWithEuclideanDistance(i) for i in [[1,1,1],[2,2,2],[3,3,3]]]
 route = BasicRoute(points, name="TestRoute")
+
+#or you can
+route = route_from_sequence([[1,1,1],[2,2,2],[3,3,3]])
+
 print(route)
 
 # TestRoute(
