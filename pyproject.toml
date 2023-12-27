@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "TSPLifesaver"
-version = "0.0.1"
+version = "0.0.2"
 description = "A toolset that simplifies the process of solving TSP (Traveling Salesman Problem) problems. "
 authors = [
     { name = "Christian Lee", email = "chrisliyuhan@gmail.com" }
