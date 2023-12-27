@@ -8,6 +8,13 @@ class AbstractPoint(ABC, MutableSequence):
 
     def insert(self, index, value): ...
 
+    @abstractmethod
+    def __init__(self,pos):
+        """
+        Init the Point
+        :param pos:
+        """
+
     @property
     def name(self):
         """

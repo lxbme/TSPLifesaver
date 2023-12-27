@@ -1,7 +1,7 @@
 from typing import List, Any, MutableSequence, Sequence
 from math import sqrt
 
-from .abc import AbstractRoute, AbstractPoint
+from TSPLifesaver.abc import AbstractRoute, AbstractPoint
 
 
 class BasicPoint(AbstractPoint):
