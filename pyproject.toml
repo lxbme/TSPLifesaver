@@ -9,7 +9,7 @@ description = "A toolset that simplifies the process of solving TSP (Traveling S
 authors = [
     { name = "Christian Lee", email = "chrisliyuhan@gmail.com" }
 ]
-license = "MIT"
+license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.6"
 
