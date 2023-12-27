@@ -15,7 +15,7 @@ class SimulatedAnnealing(AbstractOptimizer):
         :param cooling_rate:
         :param min_temperature:
         """
-        self.current_route = initial_route
+        self.current_route = deepcopy(initial_route)
         self.best_route = deepcopy(initial_route)
         self.temperature = temperature
         self.cooling_rate = cooling_rate
