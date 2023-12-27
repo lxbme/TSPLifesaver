@@ -1,6 +1,5 @@
 # TSP Lifesaver
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) 
-![PyPI - License](https://img.shields.io/pypi/l/TSPLifesaver)
 
 **!!! This package is currently under development and may contain bugs. !!!**
 
