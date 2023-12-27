@@ -35,7 +35,7 @@ print(point.distance_to([1,1,2]))
 
 Define a route:
 ```python
-points = [PointWithEuclideanDistance(i) for i in [[1,1,1],[2,2,2],[3,3,3]]
+points = [PointWithEuclideanDistance(i) for i in [[1,1,1],[2,2,2],[3,3,3]]]
 route = BasicRoute(points, name="TestRoute")
 
 #or you can
