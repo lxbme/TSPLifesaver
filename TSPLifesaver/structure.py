@@ -84,8 +84,7 @@ class BasicRoute(AbstractRoute):
         Calculates the total distance.
         :return:
         """
-        return (sum([pre.distance_to(after) for pre, after in zip(self[:-1], self[1:])]) +
-                self[-1].distance_to(self[0]))
+        return sum([pre.distance_to(after) for pre, after in zip(self[:-1], self[1:])])
 
     def swap(self, index_1: int, index_2: int) -> None:
         """
@@ -98,3 +97,11 @@ class BasicRoute(AbstractRoute):
 
     def append(self, value: AbstractPoint):
         self.points.append(value)
+
+
+class CircularRoute(BasicRoute):
+    def __init__(self, points: MutableSequence[AbstractPoint], name="CircularRoute"):
+        super().__init__(points, name)
+
+    def distance(self):
+        return super().distance() + self[-1].distance_to(self[0])
